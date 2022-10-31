@@ -12,7 +12,7 @@ class Counter extends Component {
 
         return (
         <React.Fragment>
-            <img src={this.state.imageUrl} alt=""/><br />
+            
             <span className={classes1}>{this.formatCount()}</span>
            
 
