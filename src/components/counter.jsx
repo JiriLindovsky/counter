@@ -7,19 +7,23 @@ class Counter extends Component {
 
     render() { 
 
-        let classes1= "badge m-2 badge-";
-        classes1+=this.state.count ===0? "warning":"primary";
-
+        
         return (
         <React.Fragment>
             
-            <span className={classes1}>{this.formatCount()}</span>
+            <span className={this.getBadgeClasses1()}>{this.formatCount()}</span>
            
 
             <button className='btn btn-secondary btn-sm'>Increment</button>
         </React.Fragment>
         )
         ;
+    }
+
+    getBadgeClasses1() {
+        let classes1 = "badge m-2 badge-";
+        classes1 += this.state.count === 0 ? "warning" : "primary";
+        return classes1;
     }
 
     formatCount() {
